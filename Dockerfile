@@ -17,7 +17,7 @@ RUN Rscript -e "install.packages('reshape2')"
 RUN Rscript -e "install.packages('abind')"
 RUN Rscript -e "install.packages('data.table')"
 RUN Rscript -e "install.packages('plyr')"
-RUN Rscript -e "library(BiocManager); install(c('CoreGx','tximport','rhdf5','hgu133plus2frmavecs','SummarizedExperiment','multtest','NMF','rmarkdown','limma'))"
+RUN Rscript -e "library(BiocManager); install(c('CoreGx','tximport','rhdf5','hgu133plus2frmavecs','SummarizedExperiment','multtest','NMF','rmarkdown','limma','RaggedExperiment'))"
 RUN wget 'https://filesforpublic.blob.core.windows.net/pgxprivate/genefu.tar.gz'
 RUN Rscript -e "library(devtools); install.packages('genefu.tar.gz', repos = NULL, type='source')"
 RUN wget 'https://filesforpublic.blob.core.windows.net/pgxprivate/compareDrugScreens_current.tar.gz'
