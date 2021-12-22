@@ -26,3 +26,5 @@ RUN Rscript -e "install.packages('https://cran.r-project.org/src/contrib/Archive
 RUN Rscript -e "install.packages('caret')"
 RUN Rscript -e "install.packages('DT')"
 RUN Rscript -e "install.packages('compareDrugScreens_current.tar.gz', repos = NULL)"
+RUN Rscript -e "library(BiocManager); install(c('oligo', 'GEOquery', 'affycoretools', 'pd.hta.2.0', 'RUVnormalize', 'RUVnormalizeData', 'illuminaHumanv4.db', 'beadarray'))"
+RUN Rscript -e "install.packages('reshape2')"
